@@ -1,0 +1,1858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        .site {
+            width: 100%;
+            height: 1900px;
+            /* background-color: #93bcdd; */
+        }
+
+        .header {
+            width: 100%;
+            height: 50px;
+            /* background-color: pink; */
+            /* position: relative; */
+        }
+
+        .searchinfo {
+            /* width: 300px; */
+            height: 35px;
+            /* position: absolute; */
+            float: left;
+            /* background-color: aqua; */
+            color: #a09e9c;
+            line-height: 1.42857143;
+        }
+
+        .select-opt select {
+            border: none;
+            color: #a09e9c;
+            font-size: 12px;
+        }
+
+        .searchinfo>ul>li {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: lighter;
+            color: #a09e9c;
+            padding: 15px;
+            border: none;
+        }
+
+        .contactinfo {
+            /* width: 300px; */
+            height: 37px;
+            /* background-color: yellow; */
+            /* position: absolute; */
+            /* margin-left: 1250px; */
+            float: right;
+        }
+
+        .contactinfo>ul>li {
+            float: left;
+            list-style: none;
+            padding: 10px;
+        }
+
+        .contactinfo>ul>li>a {
+            text-decoration: none;
+            color: #a09e9c;
+        }
+
+        .listrace {
+            width: 100%;
+            height: 100px;
+            /* background-color: tomato; */
+        }
+
+        .right__top {
+            width: 100%;
+            height: 100px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            /* background-color: rgb(126, 255, 71); */
+
+        }
+
+        .right_top_menu {
+            float: right;
+
+        }
+
+        .right_top_menu a {
+            text-decoration: none;
+
+        }
+
+        .right_top_menu>ul>li {
+            list-style-type: none;
+        }
+
+        .right__top ul li {
+            float: left;
+            /* list-style: none; */
+            list-style-type: none;
+            padding: 10px;
+            padding: 34px 21px;
+            padding-left: 10px;
+        }
+
+        .right__top a:hover {
+            text-decoration: none;
+            color: #a09e9c;
+            color: red;
+        }
+
+        .right__top>ul>li>a {
+            text-decoration: none;
+            color: #a09e9c;
+        }
+
+        i {
+            color: #a09e9c;
+        }
+
+        .left__top {
+            width: 45%;
+            height: 100px;
+            /* margin-left: -550px;
+       color: #1b1e20;
+       font-size: 20px;
+       font-weight: 700;
+       padding-top: 50px; */
+            /* background-color: green; */
+            float: left;
+            padding: 10px;
+        }
+
+        .logo__name {
+            font-size: 20px;
+            padding: 20px;
+            margin-left: 180px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .container {
+            width: 100%;
+            height: 900px;
+            /* background-color: blue; */
+            /* background:url(../images/welcome-hero/banner.jpg); */
+            background: url(banner.jpg);
+            z-index: 1;
+            padding-top: 40px;
+            filter: brightness(50%) opacity(70%);
+        }
+
+        .welcome-hero-text {
+            width: 100%;
+            height: 250px;
+            /* background-color: rgb(61, 96, 96); */
+            color: white;
+            text-align: center;
+
+
+        }
+
+        .welcome-hero-text>.heading {
+            font-size: 62px;
+            color: #fff;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2.4px;
+            line-height: 1.4;
+        }
+
+        .welcome-hero-text>.p1 {
+            font-size: 20px;
+            color: white;
+            margin-top: 25px;
+            text-align: center;
+            line-height: 1.8;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .welcome-hero-searchbox {
+            width: 56%;
+            height: 70px;
+            background-color: white;
+            margin: auto;
+            border-radius: 5px;
+        }
+
+        .welcome-hero-searchbox>.what {
+            width: 8%;
+            height: 70px;
+            margin: 0;
+            color: #343a3f;
+            font-size: 22px;
+            font-weight: 600;
+            padding: 14px;
+            float: left;
+        }
+
+        /* .welcome-hero-searchbox {
+            width: 25%;
+            height: 70px;
+            background-color: rgb(203, 12, 12);
+            float: left;
+            margin: 0;
+            color: #343a3f;
+            font-size: 22px;
+            font-weight: 600;
+            padding: 14px;
+        }  */
+        .what__input {
+            display: inline-block;
+            width: 300px;
+            height: 60px;
+            padding-left: 30px;
+            font-size: 14px;
+            color: #a5adb3;
+            border-radius: 3px;
+            border: 1px solid #fff;
+            outline: none;
+        }
+
+        .welcome-hero-searchbox>.dotsicon>i {
+            width: 5%;
+            height: 70px;
+            color: black;
+            text-align: center;
+            float: left;
+            padding: 19px;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+
+        .location {
+            /* width: 10%;
+            height: 70px;*/
+            /* background-color:blue; */
+            /* margin: 0;
+            color: #343a3f;
+            font-size: 22px;
+            font-weight: 600;
+            padding: 14px; */
+            /* float: left;  */
+            font-size: 20px;
+            margin-left: 30px;
+            font-weight: 600;
+            color: #343a3f;
+        }
+
+
+        .welcome-hero-searchbox>.placeholder2 {
+            width: 30%;
+            height: 70px;
+            /* background-color: black; */
+            float: left;
+            margin: 0;
+            color: #343a3f;
+            font-size: 22px;
+            font-weight: 600;
+            padding: 14px;
+        }
+
+        .welcome-hero-searchbox>.icon2>i {
+            width: 5%;
+            height: 70px;
+            color: black;
+            text-align: center;
+            float: left;
+            padding: 19px;
+            font-size: 20px;
+            margin-right: 15px;
+
+        }
+
+        .btn {
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            color: #fff;
+            width: 170px;
+            height: 70px;
+            /* background: #ff545a; */
+            text-transform: capitalize;
+            margin-left: 400px;
+            border-radius: 3px;
+        }
+
+        .divmovement {
+            width: 100%;
+            height: 300px;
+            /* background-color: #ff545a; */
+            position: relative;
+            top: -98px;
+            z-index: 1;
+            /* padding-left: 11%; */
+        }
+
+        .divmovement__container{
+            width: 70%;
+            height: 300px;
+            margin: auto;
+            /* background-color: #2b7da6; */
+
+        }
+        .resturent {
+
+            width: 200px;
+            height: 170px;
+            background: #fff;
+            border-radius: 3px;
+            margin-right: 12.5px;
+            /* margin-bottom: 20px; */
+            box-shadow: 0 0px 10px rgba(71, 71, 71, .2);
+            /* padding-top: -5px; */
+            text-decoration: none;
+            float: left;
+            list-style: none;
+            text-align: center;
+            padding-top: 20px;
+
+
+        }
+
+        .resturent>i {
+            font-size: 40px;
+        }
+
+        .resturent a {
+            display: block;
+            padding-top: 5px;
+
+        }
+
+        .resturent>h3>a {
+            font-size: 20px;
+            text-decoration: none;
+            color: #343a3f;
+        }
+
+
+        .resturent>p>a {
+            text-decoration: none;
+            color: #a09e9c;
+        }
+
+        .resturent>ul>li {
+            list-style: none;
+        }
+
+        .resturent:hover {
+            color: white;
+            background-color: #ff545a;
+        }
+
+        .resturent:hover a,
+        .resturent:hover i {
+            color: white;
+        }
+
+        .how-it-works__main {
+            width: 100%;
+            /* height: 200px; */
+            /* background-color: rgb(219, 14, 14); */
+            /* padding: 50px; */
+            clear: both;
+            margin: auto;
+        }
+
+        .works__heading {
+            width: 100%;
+            height: auto;
+            /* background-color: #ffff00; */
+            /* padding: 90px; */
+
+        }
+
+        .main__heading {
+            width: 100%;
+            height: 100px;
+            /* background-color: rgb(43, 204, 204); */
+            clear: both;
+            text-align: center;
+
+        }
+
+        .main__heading>h4 {
+
+            /* padding-right: 63px; */
+            /* margin-top: 40px; */
+            /* padding-left: 50px; */
+            text-align: center;
+        }
+
+        .main__heading>p {
+            padding-top: 10px;
+            /* text-align: center; */
+
+        }
+
+        .works__content {
+            width: auto;
+            height: 400px;
+            /* background-color: aqua; */
+            margin: auto;
+        }
+
+        .works_content_section {
+            width: 70%;
+            height: 300px;
+            /* background-color: yellowgreen; */
+            margin: auto;
+        }
+
+        .what-to-do {
+            width: 30.3%;
+            height: 350px;
+            float: left;
+            /* background-color: pink; */
+            padding: 47px 42px;
+            border-radius: 3px;
+            box-shadow: 0 0px 5px rgba(71, 71, 71, .2);
+            margin-bottom: 30px;
+            margin-left: 2%;
+        }
+
+        .content>h2 {
+            color: #343a3f;
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 1.1;
+            text-align: center;
+            margin-top: 10px;
+            padding-bottom: 20px;
+
+        }
+
+        .content p {
+            margin-bottom: 25px;
+            color: #767f86;
+            font-size: 14px;
+            line-height: 1.8;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .what-to-do:hover {
+            color: white;
+            background-color: #ff545a;
+        }
+
+        .what-to-do:hover>.bulb i,
+        .what-to-do:hover>.welcome-hero-button {
+
+            color: #ff545a;
+        }
+
+
+        /* .single-how-works {} */
+
+        .bulb__icon {
+            width: 50%;
+            height: 100px;
+            /* background-color: #93bcdd; */
+            margin-left: 90px;
+        }
+
+        .container_wrapper {
+            position: relative;
+        }
+
+        .welcome-hero {
+            position: absolute;
+            top: 105px;
+            width: 100%;
+            height: 500px;
+            /* background-color: red; */
+        }
+
+        .welcome-hero-button {
+            width: 100px;
+            height: 35px;
+            font-size: 12px;
+            color: #767f86;
+            border: 1px solid #d3d6d9;
+            border-radius: 3px;
+            margin-left: 90px;
+            margin-top: 10px;
+        }
+
+        .search__button {
+            position: absolute;
+            background: #ff545a;
+            display: inline-block;
+            width: 180px;
+            height: 70px;
+            line-height: 60px;
+            text-decoration: none;
+            text-transform: capitalize;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            border: 0;
+            /* float: right; */
+        }
+
+
+        .bulb {
+            margin: auto;
+            /* margin-left: 120px; */
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            font-size: 25px;
+            color: #212527;
+            line-height: 80px;
+            background: #eef2f6;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .explore {
+            width: 100%;
+            height: 1200px;
+            /* background-color: rgb(198, 115, 115); */
+        }
+
+        .explore__container {
+            width: 90%;
+            height: 550px;
+            /* background-color: green; */
+            margin: auto;
+        }
+
+        .section__header {
+            width: 95%;
+            height: 100px;
+            /* background-color: yellow; */
+            margin: auto;
+        }
+
+        .section__header {
+            text-align: center;
+        }
+
+        .section__header p {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .explore__content {
+            width: 95%;
+            height: 500px;
+            /* background-color: #343a3f; */
+            margin: auto;
+            clear: both;
+
+        }
+
+        .explore_content_inner {
+            width: 100%;
+            /* background-color: red; */
+            height: 500px;
+            clear: both;
+
+
+        }
+
+        .single-explore-item {
+            width: 29%;
+            height: 500px;
+            /* background-color: pink; */
+            float: left;
+            transition: .3s linear;
+            box-shadow: 0 10px 20px rgba(21, 19, 19, .2);
+            margin-bottom: 20px;
+            margin-left: 3.2%;
+        }
+
+
+
+        .single-explore-item:hover {
+            box-shadow: 0 10px 20px rgba(21, 19, 19, .4);
+        }
+        
+
+        .single-explore-txt {
+            width: 100%;
+            height: 200px;
+            padding: 20px;
+            /* background-color: aqua; */
+        }
+
+        .single-explore-txt>.explore-rating-price {
+            margin: 15px 0 20px;
+        }
+
+        .explore-rating {
+            /* background: blue; */
+            display: inline-block;
+            width: 32px;
+            height: 20px;
+            line-height: 20px;
+            color: #fff;
+            text-align: center;
+            border-radius: 3px;
+            font-weight: 500;
+            margin-right: 10px;
+        }
+
+        .explore-price {
+            color: red;
+        }
+
+        /* .explore-person {
+            /* background-color: #1e5f94; */
+
+        /* }  */
+
+        .line {
+            clear: both;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e1e5eb;
+        }
+
+        .explore-person-img {
+            float: left;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            /* background-color: red; */
+        }
+
+        .explore-person-content {
+            float: right;
+            width: 292px;
+            height: 75px;
+            /* background-color: #5f6c76; */
+            text-align: justify;
+            padding-left: 20px;
+        }
+
+        .explore__closepart {
+            width: 80px;
+            height: 30px;
+            /* background-color: yellow; */
+            float: left;
+        }
+
+        .explore__endpart {
+            width: 100%;
+            height: 65px;
+            /* background-color: pink; */
+            clear: both;
+            padding-top: 5%;
+        }
+
+        .close-btn {
+            color: red;
+            border: none;
+            float: left;
+        }
+
+        .explore__icon {
+            width: 17%;
+            height: 30px;
+            /* background-color: #ff545a; */
+            float: right;
+        }
+
+        .explore__icon i {
+            color: #767f86;
+        }
+
+        .reviews {
+            width: 100%;
+            height: 500px;
+            /* background-color: pink; */
+            padding: 30px;
+            clear: both;
+        }
+
+        .review-header {
+            width: 90%;
+            height: 450px;
+            /* background-color: #343a3f; */
+            margin: auto;
+        }
+
+        .review-header-section {
+            width: 85%;
+            height: 100px;
+            /* background-color: aqua; */
+            margin: auto;
+            text-align: center;
+        }
+
+        .review-header-section p {
+            padding: 15px;
+        }
+
+        .reviews__content {
+            width: 100%;
+            height: 500px;
+            /* background-color: yellow; */
+            margin-left: 45px;
+        }
+
+        .reviews-content-person {
+            width: 23%;
+            height: 300px;
+            /* background-color: #ff545a; */
+            padding: 30px;
+            box-shadow: 4px 4px 4px 4px #efe6e6;
+            ;
+            float: left;
+        }
+
+        .reviews-person-first {
+            width: 100%;
+            height: 100px;
+            /* background-color: rgb(165, 36, 58); */
+            padding: 20px;
+        }
+
+        .reviews-person-second {
+            width: 100%;
+            height: 150px;
+            /* background-color: green; */
+            clear: both;
+
+        }
+
+        .reviews-person-second p {
+            text-align: left;
+            font-size: 18px;
+        }
+
+        .firstperson-img {
+            width: 35%;
+            height: 100px;
+            /* background-color: purple; */
+            float: left;
+        }
+
+        .firstperson__content {
+            width: 60%;
+            height: 50px;
+            /* background-color: yellow; */
+            float: left;
+            margin-left: -5px;
+
+        }
+
+        .stars i {
+            color: yellow;
+        }
+
+        .wrapper__statistics {
+            width: 100%;
+            height: 400px;
+            background-color: #343a3f;
+            /* background: rgba(75,75,75,.60); */
+
+
+        }
+
+        .statistics__image {
+            width: 100%;
+            height: 400px;
+            background-color: aqua;
+            /* The image used */
+            background-image: url("counter-banner.jpg");
+
+            background-size: cover;
+            background-attachment: fixed;
+            filter: brightness(50%);
+            /* scrollbar-highlight-color:#343a3f; */
+            /* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(78, 78, 240) 0%, rgb(174, 233, 245) 100%); */
+        }
+
+        .wrapper__statistics {
+            position: relative;
+        }
+
+        .counter__wrapper {
+            width: 80%;
+            height: 200px;
+            /* background-color: orange; */
+            position: absolute;
+            top: 150px;
+            left: 140px;
+            /* background-attachment: fixed; */
+        }
+
+        .counter__section {
+            width: 90%;
+            height: 180px;
+            text-align: center;
+            /* background-color: #ff545a; */
+            margin: auto;
+        }
+
+        .counter__first {
+            width: 25%;
+            height: 200px;
+            float: left;
+            /* margin-left: 40px; */
+            font-family: 'Poppins', sans-serif;
+            /* background-color: green; */
+        }
+
+        .counter1 {
+            width: 100%;
+            height: 190px;
+            /* background-color: yellow; */
+            padding: 30px;
+            font-size: 60px;
+            text-align: center;
+            color: white;
+        }
+
+        .counter {
+            width: 100%;
+            height: 60px;
+            /* background-color: pink; */
+
+        }
+
+        .counter1 h3 {
+            color: white;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .news__wrapper {
+            width: 100%;
+            height: 700px;
+            /* background-color: lightcoral; */
+        }
+
+        .news__article {
+            width: 90%;
+            height: 700px;
+            /* background-color: cyan; */
+            margin: auto;
+            padding: 80px
+        }
+
+        .news__header {
+            width: 100%;
+            height: 150px;
+            /* background-color: #343a3f; */
+        }
+
+        .news__header h2 {
+            color: #505866;
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1.3px;
+            text-align: center;
+        }
+
+        .news__header p {
+            color: #767f86;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .news__blog {
+            width: 100%;
+            height: 450px;
+            /* background-color: pink; */
+        }
+
+        .news-blog-description {
+            width: 31%;
+            height: 450px;
+            float: left;
+            /* background-color: yellow; */
+            box-shadow: 0 10px 20px rgba(21, 19, 19, .1);
+        }
+
+        .news-blog-description:hover {
+            box-shadow: 0 10px 20px rgba(21, 19, 19, .2);
+        }
+
+        .news-blog-description:hover h2 {
+            color: red;
+        }
+
+        .blog__image {
+            width: 100%;
+            height: 250px;
+            /* background-color: green; */
+        }
+
+        .news-blog-content {
+            width: 100%;
+            height: 200px;
+            /* background-color: #ff545a; */
+            padding: 25px 28px 27px;
+        }
+
+        .news-blog-content h2 {
+            display: inline-block;
+            font-size: 18px;
+            color: #343a3f;
+            margin: 12px 0 20px;
+        }
+
+        .news-blog-content p {
+            margin: 10px;
+            text-align: left;
+        }
+
+        .subscription__wrapper {
+            width: 100%;
+            height: 400px;
+            /* background-color: pink; */
+            position: relative;
+        }
+
+        .subscription__container {
+            width: 100%;
+            height: 300px;
+            /* background-color:yellow; */
+            position: absolute;
+            top: 70px;
+        }
+
+        .subscription-container-text {
+            width: 70%;
+            height: 150px;
+            /* background-color: green; */
+            margin: auto;
+            padding: 20px;
+        }
+
+        .subscription-container-text h2 {
+            text-align: center;
+            color: #343a3f;
+
+        }
+
+        .subscription-container-text p {
+            text-align: center;
+            margin-top: 20px;
+            color: #7b8088;
+        }
+
+        .subscription__form {
+            width: 100%;
+            height: 100px;
+            /* background-color: aqua; */
+            margin-top: 90px;
+        }
+
+        .subscription-form-input {
+            width: 95%;
+            height: 100px;
+            /* background-color: #505866; */
+            margin: auto;
+        }
+
+
+        .subscription-input-form {
+            display: inline-block;
+            width: 450px;
+            height: 60px;
+            padding-left: 30px;
+            font-size: 16px;
+            color: #a5adb3;
+            border-radius: 3px;
+            border: 1px solid #fff;
+            outline: none;
+
+
+        }
+
+        .subscription__button {
+            position: absolute;
+            background: #ff545a;
+            display: inline-block;
+            width: 180px;
+            height: 60px;
+            line-height: 60px;
+            text-decoration: none;
+            text-transform: capitalize;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            border: 0;
+        }
+
+        .form__description {
+            width: 60%;
+            height: 60px;
+            /* background-color: blue; */
+            margin: auto;
+        }
+
+        .form__description:hover {
+            box-shadow: 5px 5px 5px 5px grey;
+        }
+
+        .footer__listrace {
+            width: 80%;
+            height: 100px;
+            /* background-color: yellow; */
+            margin: auto;
+        }
+
+        .copyright {
+            width: 80%;
+            height: 100px;
+            margin: auto;
+            /* background-color: red; */
+            padding: 10px;
+        }
+
+        .footer__container {
+            width: 100%;
+            height: 50px;
+            /* background-color: blue; */
+        }
+
+        .left__copyright {
+            width: 40%;
+            height: 50px;
+            /* background-color: yellow; */
+            text-transform: capitalize;
+            float: left;
+            color: #a5adb3;
+
+        }
+
+        .right__copyright {
+            width: 60%;
+            height: 50px;
+            /* background-color: pink; */
+            float: right;
+        }
+
+        .right__copyright i {
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            background: #eef2f6;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        .right__copyright {
+            text-align: right;
+            color: #a5adb3;
+        }
+
+
+        .single-explore-img {
+            width: 100%;
+        }
+
+        .single-explore-img img {
+            width: 100%;
+            height: auto;
+        }
+
+        @media all and (max-width:768px){
+        .site, .header, .searchinfo, .listrace, .container_wrapper, .divmovement, .how-it-works__main, .explore, .reviews, .wrapper__statistics, .news__wrapper, .subscription__wrapper, .copyright {
+                width: 100%;
+            }
+        } 
+
+
+    </style>
+</head>
+
+<body>
+    <div class="site">
+        <div class="header">
+            <div class="searchinfo">
+                <ul>
+                    <li class="select-opt">
+                        <select name="language" id="language">
+                            <option value="default">EN</option>
+                            <option value="Bangla">BN</option>
+                            <option value="Arabic">AB</option>
+                        </select>
+                    </li>
+                    <li class="select-opt">
+                        <select name="currency" id="currency">
+                            <option value="usd">USD</option>
+                            <option value="euro">Euro</option>
+                            <option value="bdt">BDT</option>
+                        </select>
+                    </li>
+                    <li class="select-opt">
+                        <a href="#"><i class="fa fa-search"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contactinfo">
+                <ul>
+                    <li><a href="">+1 222 777 6565</a></li>
+                    <li><a href="">Sign In</a></li>
+                    <li><a href="">Register</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="listrace">
+            <div class="left__top">
+                <div class="logo__name">
+                    <span>List</span>
+                    <span class="red">Race</span>
+                </div>
+            </div>
+
+            <div class="right__top">
+                <div class="right_top_menu">
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">HOW IT WORKS</a></li>
+                        <li><a href="">EXPLORE</a></li>
+                        <li><a href="">REVIEW</a></li>
+                        <li><a href="">EXPLORE</a></li>
+                        <li><a href="">BLOG</a></li>
+                        <li><a href="">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container_wrapper">
+            <div class="container"> </div>
+            <div class="welcome-hero">
+                <div class="welcome-hero-text">
+                    <h2 class="heading">BEST PLACE TO FIND AND EXPLORE
+                    </h2>
+                    <h2 class="heading">
+                        THAT ALL YOU NEED</h2>
+                    <p class="p1">Find Best Place, Restaurant, Hotel, Real State and many more think in just One click
+                    </p>
+                </div>
+
+                <div class="welcome-hero-searchbox">
+
+                    <div class="what">What?</div>
+                    <div class="placeholder">
+                        <form action="">
+                            <input type="text" class="what__input" placeholder="Ex: Palce, Resturent, Food, Automobile">
+                            <i class="fa-solid fa-list-ul"></i>
+                            <span class="location">Location</span>
+                            <input type="text" class="what__input" placeholder=" Ex: London, Newyork, Rome">
+                            <button class="search__button">
+                                Search
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="divmovement">
+            <div class="divmovement__container">
+
+            
+            <div class="resturent">
+                <i class="fa fa-hotel"></i>
+                <h3><a href="">Resturent</a></h3>
+                <p><a href="">150 Listings</a></p>
+            </div>
+            <div class="resturent">
+                <i class="fa-thin fa-hotel"></i>
+                <h3><a href="">Destination</a></h3>
+                <p><a href="">214 Listings</a></p>
+            </div>
+            <div class="resturent">
+                <i class="fa-thin fa-hotel"></i>
+                <h3><a href="">Hotels</a></h3>
+                <p><a href="">185 Listings</a></p>
+            </div>
+            <div class="resturent">
+                <i class="fa-thin fa-hotel"></i>
+                <h3><a href="">Healthcaree</a></h3>
+                <p><a href="">200 Listings</a></p>
+            </div>
+            <div class="resturent">
+                <i class="fa-thin fa-hotel"></i>
+                <h3><a href="">Automotion</a></h3>
+                <p><a href="">120 Listings</a></p>
+            </div>
+            </div>
+        </div>
+        <div class="how-it-works__main">
+            <div class="works__heading">
+                <div class="main__heading">
+                    <h4>HOW IT WORKS</h4>
+                    <p> Learn More about how our website works</p>
+                </div>
+            </div>
+
+            <div class="works__content">
+                <div class="works_content_section">
+
+                    <div class="what-to-do">
+                        <div class="bulb"> <i class="fa-regular fa-lightbulb"></i></div>
+                        <div class="single-how-works">
+
+                            <h2>Choose what to Do</h2>
+                            <p>Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt
+                                ut laboremagna aliqua.</p>
+                        </div>
+                        <button class="welcome-hero-button">Read More</button>
+
+
+                    </div>
+                    <div class="what-to-do">
+                        <div class="bulb"> <i class="fa-solid fa-car"></i></div>
+                        <div class="single-how-works">
+
+                            <h2>Find what you want</h2>
+                            <p>Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt
+                                ut laboremagna aliqua.</p>
+                        </div>
+                        <button class="welcome-hero-button">Read More</button>
+
+
+                    </div>
+                    <div class="what-to-do">
+                        <div class="bulb"> <i class="fa-solid fa-car"></i></div>
+                        <div class="single-how-works">
+
+                            <h2>Explore amazing Place</h2>
+                            <p>Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt
+                                ut laboremagna aliqua.</p>
+                        </div>
+                        <button class="welcome-hero-button">Read More</button>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="explore">
+            <div class="explore__container">
+                <div class="section__header">
+                    <h2>EXPLORE</h2>
+                    <p>Explore New place, food, culture around the world and many more</p>
+                </div>
+
+                <div class="explore__content">
+                    <div class="explore_content_inner">
+                        <div class="single-explore-item">
+                            <div class="single-explore-img">
+                                <img src="tommy.jpg" alt="">
+                            </div>
+                            <div class="single-explore-txt">
+                                <h4>Tommy Helfinger Bar</h4>
+                                <p class="explore-rating-price">
+                                    <span class="7">5.0 | </span>
+                                    <span> 10 ratings | </span>
+                                    Form <span class="explore-price">5$-300$ | </span>
+                                    <span>Resturent | </span>
+                                </p>
+                                <div class="explore-person">
+                                    <div class="explore-person-img">
+                                        <img src="smallperson.png" alt="">
+                                    </div>
+                                    <div class="explore-person-content">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor
+                                            incid ut labore et dolore magna aliqua....
+                                        </p>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="explore__endpart">
+                                        <div class="explore__closepart">
+                                            <button class="close-btn">Close Now</button>
+                                        </div>
+                                        <div class="explore__icon">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <i class="fa-solid fa-upload"></i>
+                                            <i class="fa-solid fa-heart"></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="single-explore-item">
+                            <div class="single-explore-img">
+                                <img src="tommy.jpg" alt="">
+                            </div>
+                            <div class="single-explore-txt">
+                                <h4>Tommy Helfinger Bar</h4>
+                                <p class="explore-rating-price">
+                                    <span class="7">5.0 | </span>
+                                    <span> 10 ratings | </span>
+                                    Form <span class="explore-price">5$-300$ | </span>
+                                    <span>Resturent | </span>
+                                </p>
+                                <div class="explore-person">
+                                    <div class="explore-person-img">
+                                        <img src="smallperson.png" alt="">
+                                    </div>
+                                    <div class="explore-person-content">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor
+                                            incid ut labore et dolore magna aliqua....
+                                        </p>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="explore__endpart">
+                                        <div class="explore__closepart">
+                                            <button class="close-btn">Close Now</button>
+                                        </div>
+                                        <div class="explore__icon">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <i class="fa-solid fa-upload"></i>
+                                            <i class="fa-solid fa-heart"></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-explore-item">
+                            <div class="single-explore-img">
+                                <img src="tommy.jpg" alt="">
+                            </div>
+                            <div class="single-explore-txt">
+                                <h4>Tommy Helfinger Bar</h4>
+                                <p class="explore-rating-price">
+                                    <span class="7">5.0 | </span>
+                                    <span> 10 ratings | </span>
+                                    Form <span class="explore-price">5$-300$ | </span>
+                                    <span>Resturent | </span>
+                                </p>
+                                <div class="explore-person">
+                                    <div class="explore-person-img">
+                                        <img src="smallperson.png" alt="">
+                                    </div>
+                                    <div class="explore-person-content">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor
+                                            incid ut labore et dolore magna aliqua....
+                                        </p>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="explore__endpart">
+                                        <div class="explore__closepart">
+                                            <button class="close-btn">Close Now</button>
+                                        </div>
+                                        <div class="explore__icon">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <i class="fa-solid fa-upload"></i>
+                                            <i class="fa-solid fa-heart"></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-explore-item">
+                            <div class="single-explore-img">
+                                <img src="tommy.jpg" alt="">
+                            </div>
+                            <div class="single-explore-txt">
+                                <h4>Tommy Helfinger Bar</h4>
+                                <p class="explore-rating-price">
+                                    <span class="7">5.0 | </span>
+                                    <span> 10 ratings | </span>
+                                    Form <span class="explore-price">5$-300$ | </span>
+                                    <span>Resturent | </span>
+                                </p>
+                                <div class="explore-person">
+                                    <div class="explore-person-img">
+                                        <img src="smallperson.png" alt="">
+                                    </div>
+                                    <div class="explore-person-content">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor
+                                            incid ut labore et dolore magna aliqua....
+                                        </p>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="explore__endpart">
+                                        <div class="explore__closepart">
+                                            <button class="close-btn">Close Now</button>
+                                        </div>
+                                        <div class="explore__icon">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <i class="fa-solid fa-upload"></i>
+                                            <i class="fa-solid fa-heart"></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-explore-item">
+                            <div class="single-explore-img">
+                                <img src="tommy.jpg" alt="">
+                            </div>
+                            <div class="single-explore-txt">
+                                <h4>Tommy Helfinger Bar</h4>
+                                <p class="explore-rating-price">
+                                    <span class="7">5.0 | </span>
+                                    <span> 10 ratings | </span>
+                                    Form <span class="explore-price">5$-300$ | </span>
+                                    <span>Resturent | </span>
+                                </p>
+                                <div class="explore-person">
+                                    <div class="explore-person-img">
+                                        <img src="smallperson.png" alt="">
+                                    </div>
+                                    <div class="explore-person-content">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor
+                                            incid ut labore et dolore magna aliqua....
+                                        </p>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="explore__endpart">
+                                        <div class="explore__closepart">
+                                            <button class="close-btn">Close Now</button>
+                                        </div>
+                                        <div class="explore__icon">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <i class="fa-solid fa-upload"></i>
+                                            <i class="fa-solid fa-heart"></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="single-explore-item">
+                            <div class="single-explore-img">
+                                <img src="tommy.jpg" alt="">
+                            </div>
+                            <div class="single-explore-txt">
+                                <h4>Tommy Helfinger Bar</h4>
+                                <p class="explore-rating-price">
+                                    <span class="7">5.0 | </span>
+                                    <span> 10 ratings | </span>
+                                    Form <span class="explore-price">5$-300$ | </span>
+                                    <span>Resturent | </span>
+                                </p>
+                                <div class="explore-person">
+                                    <div class="explore-person-img">
+                                        <img src="smallperson.png" alt="">
+                                    </div>
+                                    <div class="explore-person-content">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor
+                                            incid ut labore et dolore magna aliqua....
+                                        </p>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="explore__endpart">
+                                        <div class="explore__closepart">
+                                            <button class="close-btn">Close Now</button>
+                                        </div>
+                                        <div class="explore__icon">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <i class="fa-solid fa-upload"></i>
+                                            <i class="fa-solid fa-heart"></i>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <div class="reviews">
+        <div class="review-header">
+            <div class="review-header-section">
+                <h2>CLIENTS REVIEWS</h2>
+                <p>What our client say about us</p>
+            </div>
+            <div class="reviews__content">
+                <div class="reviews-content-person">
+                    <div class="reviews-person-first">
+                        <div class="firstperson-img">
+                            <img src="smallperson.png" alt="">
+                        </div>
+                        <div class="firstperson__content">
+                            <h4>Tom Leakar</h4>
+                            <p>London, UK</p>
+                        </div>
+                        <div class="stars">
+
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+
+
+                    <div class="reviews-person-second">
+                        <p>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum. Sed ut perspiciatis eaque.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="reviews-content-person">
+                    <div class="reviews-person-first">
+                        <div class="firstperson-img">
+                            <img src="smallperson.png" alt="">
+                        </div>
+                        <div class="firstperson__content">
+                            <h4>Tom Leakar</h4>
+                            <p>London, UK</p>
+                        </div>
+                        <div class="stars">
+
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+
+
+                    <div class="reviews-person-second">
+                        <p>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum. Sed ut perspiciatis eaque.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="reviews-content-person">
+                    <div class="reviews-person-first">
+                        <div class="firstperson-img">
+                            <img src="smallperson.png" alt="">
+                        </div>
+                        <div class="firstperson__content">
+                            <h4>Tom Leakar</h4>
+                            <p>London, UK</p>
+                        </div>
+                        <div class="stars">
+
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+
+
+                    <div class="reviews-person-second">
+                        <p>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum. Sed ut perspiciatis eaque.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="reviews-content-person">
+                    <div class="reviews-person-first">
+                        <div class="firstperson-img">
+                            <img src="smallperson.png" alt="">
+                        </div>
+                        <div class="firstperson__content">
+                            <h4>Tom Leakar</h4>
+                            <p>London, UK</p>
+                        </div>
+                        <div class="stars">
+
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+
+
+                    <div class="reviews-person-second">
+                        <p>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum. Sed ut perspiciatis eaque.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper__statistics">
+        <div class="statistics__image">
+            <!-- <img src="counter-banner.jpg" alt=""> -->
+
+        </div>
+        <div class="counter__wrapper">
+            <div class="counter__section">
+                <div class="counter__first">
+                    <div class="counter1">
+                        <span class="counter">90</span>
+                        <span>K+</span>
+                        <h3>Listings</h3>
+                    </div>
+                </div>
+
+                <div class="counter__first">
+                    <div class="counter1">
+                        <span class="counter">40 </span>
+                        <span>K+</span>
+
+                        <h3>Listing Categories</h3>
+                    </div>
+                </div>
+                <div class="counter__first">
+                    <div class="counter1">
+                        <span class="counter">65 </span>
+                        <span>K+</span>
+
+                        <h3>Visitors</h3>
+                    </div>
+                </div>
+                <div class="counter__first">
+                    <div class="counter1">
+                        <span class="counter">50 </span>
+                        <span>K+</span>
+                        <h3>Happy Clients</h3>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="news__wrapper">
+        <div class="news__article">
+            <div class="news__header">
+                <h2>news and articles</h2>
+                <p>Always upto date with our latest News and Articles </p>
+
+            </div>
+            <div class="news__blog">
+                <div class="news-blog-description">
+                    <div class="blog__image">
+                        <img src="blog1image.jpg" alt="">
+                    </div>
+
+                    <div class="news-blog-content">
+                        <h2>How to find your Desired Place more quickly</h2>
+                        <span>Posted</span>
+                        <span>By</span>
+                        <span>ADMIN | </span>
+                        <span>March 2018</span>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore
+                            incididunt ut labore et dolore magna.
+                        </p>
+                    </div>
+                </div>
+                <div class="news-blog-description">
+                    <div class="blog__image">
+                        <img src="blog2.jpg" alt="">
+                    </div>
+
+                    <div class="news-blog-content">
+                        <h2>How to find your Desired Place more quickly</h2>
+                        <span>Posted</span>
+                        <span>By</span>
+                        <span>ADMIN | </span>
+                        <span>March 2018</span>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore
+                            incididunt ut labore et dolore magna.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="news-blog-description">
+                    <div class="blog__image">
+                        <img src="blog3.jpg" alt="">
+                    </div>
+
+                    <div class="news-blog-content">
+                        <h2>How to find your Desired Place more quickly</h2>
+                        <span>Posted</span>
+                        <span>By</span>
+                        <span>ADMIN | </span>
+                        <span>March 2018</span>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur de adipisicing elit, sed do eiusmod tempore
+                            incididunt ut labore et dolore magna.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="subscription__wrapper">
+        <div class="subscription__container">
+            <div class="subscription-container-text">
+                <h2>
+                    DO YOU WANT TO ADD YOUR BUSINESS LISTINGS WITH US?
+                </h2>
+                <p>
+                    Listrace offer you to list your business with us and we very much able to promote your Business.
+                </p>
+                <div class="subscription__form">
+                    <div class="subscription-form-input">
+                        <div class="form__description">
+                            <form action="">
+                                <input type="email" class="subscription-input-form" placeholder="Enter your email here">
+                                <button class="subscription__button">
+                                    creat account
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="listrace">
+        <div class="footer__listrace">
+            <div class="left__top">
+                <div class="logo__name">
+                    <span>List</span>
+                    <span class="red">Race</span>
+                </div>
+            </div>
+
+            <div class="right__top">
+                <div class="right_top_menu">
+                    <ul>
+                        <li><a href="">HOW IT WORKS</a></li>
+                        <li><a href="">EXPLORE</a></li>
+                        <li><a href="">REVIEW</a></li>
+                        <li><a href="">BLOG</a></li>
+                        <li><a href="">CONTACT</a></li>
+                        <li><a href="">MY ACCOUNT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="footer__container">
+            <div class="left__copyright">
+
+                <span>©copyright. designed and developed by </span>
+                <span>themesine</span>
+            </div>
+            <div class="right__copyright">
+                <span> <i class="fa-solid fa-phone"></i>
+                    +1 (222) 777 8888</span>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-google-plus"></i>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+
+    <script src="second_jquery.js"></script>
+    <script src="second_waypoint.js"></script>
+    <script src="second_counter.js"></script>
+    <script>
+        $(function () {
+            $('.counter').counterUp({
+                delay: 5,
+                time: 500,
+            });
+        });
+    </script>
+
+
+
+</body>
+
+</html>
